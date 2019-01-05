@@ -34,7 +34,10 @@ class WebPushChannel
             return;
         }
 
-        $payload = json_encode($notification->toWebPush($notifiable, $notification)->toArray());
+//        $payload = json_encode($notification->toWebPush($notifiable, $notification)->toArray());
+
+        $payload = ['notification' => $notification->toWebPush($notifiable, $notification)->toArray()];
+        $payload = json_encode($payload);
 
         $subscriptions->each(function ($sub) use ($payload) {
             $this->webPush->sendNotification(
