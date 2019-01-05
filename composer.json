@@ -1,16 +1,7 @@
 {
-    "name": "laravel-notification-channels/webpush",
-    "description": "Web Push Notifications driver for Laravel.",
-    "homepage": "https://github.com/laravel-notification-channels/webpush",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Cretu Eusebiu",
-            "email": "me@cretueusebiu.com",
-            "homepage": "http://cretueusebiu.com",
-            "role": "Developer"
-        }
-    ],
+    "name": "ngoahamos/webpush",
+    "description": "Web Push notification channel for Laravel",
+    "type": "library",
     "require": {
         "php": "^7.0",
         "illuminate/notifications": "^5.3",
@@ -22,29 +13,11 @@
         "phpunit/phpunit": "~6.0",
         "orchestra/testbench": "^3.5"
     },
-    "autoload": {
-        "psr-4": {
-            "NotificationChannels\\WebPush\\": "src"
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Amos Ngoah",
+            "email": "ngoahamos@gmail.com"
         }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "NotificationChannels\\WebPush\\Test\\": "tests"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "NotificationChannels\\WebPush\\WebPushServiceProvider"
-            ]
-        }
-    },
-    "config": {
-        "sort-packages": true
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "scripts": {
-        "test": "vendor/bin/phpunit"
-    }
+    ]
 }
