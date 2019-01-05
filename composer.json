@@ -19,5 +19,30 @@
             "name": "Amos Ngoah",
             "email": "ngoahamos@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "NotificationChannels\\WebPush\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NotificationChannels\\WebPush\\Test\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NotificationChannels\\WebPush\\WebPushServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    }
 }
